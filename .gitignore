@@ -1,0 +1,95 @@
+# <https://github.com/github/gitignore/blob/main/WordPress.gitignore>
+# <https://github.com/roots/bedrock/blob/master/.gitignore>
+
+# Themes
+/wp-content/themes/twenty*/
+/wp-content/themes/Divi/
+/wp-content/themes/Extra/
+/wp-content/themes/Newspaper/
+/wp-content/themes/blocksy/
+/wp-content/themes/dt-the7/
+/wp-content/themes/mh-magazine/
+
+# Plugins
+/wp-content/plugins/*
+!/wp-content/plugins/.gitkeep
+
+# Must-Use Plugins: track file, ignore dir
+/wp-content/mu-plugins/*/
+# ...but allow sources:
+!/wp-content/mu-plugins/kleinsites
+
+# Other stuff
+/wp-content/blogs.dir
+/wp-content/cache
+/wp-content/upgrade
+/wp-content/uploads
+!/wp-content/uploads/.gitkeep
+
+# WordPress Core
+/wp-admin/
+/wp-content/languages
+/wp-includes/
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+# These will be modified by core during updates:
+/index.php
+/wp-content/index.php
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+
+# WordPress Core in a subdirectory:
+/wp/
+
+# Allow wp-config.php; secrets offloaded to environment
+!/wp-config.php
+
+# Data/logs/testing
+.data
+*.log
+*.sql
+/test-results/
+/playwright-report/
+/blob-report/
+
+# Secrets
+auth.json
+# x509 public certificates and secret keys are generated directly in each
+# environment.  While the public certificate may be copied as needed, it is not
+# really useful outside of its home environment.  The secret key should *NEVER*
+# leave its home environment.
+.config/x509/keys/*
+!.config/x509/keys/.gitkeep
+.config/x509/certs/sp.crt
+.env
+.env.*
+!.env.example
+.ssh
+*.key
+*.pem
+
+# Dependencies
+node_modules
+vendor
+
+# Context-specific
+*.cache
+*.local
+*.local.*
+!*.local*.example
+.direnv
+.pre-commit-config.yaml
+
+# Plugin: Query Monitor
+# This is a symbolic link whose path will vary per-environment.
+/wp-content/db.php
+
+# Build artifacts
+hot
+result
+
+# Editor
+/.idea/
+/wp-content/et-cache/

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="KleinwebPreventWordPressLogin">
+    <description>Prevent WordPress Login Coding Standards</description>
+
+    <file>./.php-cs-fixer.dist.php</file>
+
+    <file>./prevent-wordpress-login.php</file>
+
+    <rule ref="Kleinweb">
+        <!-- TODO(bootstrap): Uncomment if needed, delete if not: -->
+        <!-- <exclude name="PEAR.Commenting.FileComment" /> -->
+        <!-- <exclude name="SlevomatCodingStandard.ControlStructures.DisallowEmpty.DisallowedEmpty"/> -->
+        <!-- <exclude name="Squiz.Commenting.FileComment" /> -->
+        <exclude name="Squiz.NamingConventions.ValidFunctionName.NotCamelCaps"/>
+        <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
+        <!-- <exclude name="SlevomatCodingStandard.Files.LineLength.LineTooLong"/> -->
+        <!-- <exclude name="Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps"/> -->
+    </rule>
+</ruleset>
